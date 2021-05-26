@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Expence from './components/Expences/Expence';
+
 
 function App() {
+  const expences = [
+    {title:'Car Insurence', amount:250, date:new Date(2021,5,22)},
+    {title:'Byke Insurence', amount:150, date:new Date(2021,5,22)},
+    {title:'Super Car Insurence', amount:350, date:new Date(2021,5,22)},
+    {title:'Motor Car Insurence', amount:950, date:new Date(2021,5,22)},
+    
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+      <div className="App-header">
+        <h1>
           Kunal Shaw
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        </h1>
+        <Expence items={expences}/>
+      </div>
     </div>
   );
 }
