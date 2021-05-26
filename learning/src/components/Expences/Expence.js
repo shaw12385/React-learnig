@@ -3,7 +3,6 @@ import ExpenseItem from '../Expences/ExpenceItem';
 import '../Expences/Expence.css'
 
 function Expence(props){
-    console.log(props.items[0].title);
     return (
         <Cards className="expenses">
            <ExpenseItem title={props.items[0].title} amount={props.items[0].amount} date={props.items[0].date} />
