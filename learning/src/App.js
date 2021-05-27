@@ -10,12 +10,17 @@ function App() {
     {title:'Motor Car Insurence', amount:950, date:new Date(2021,5,22)},
     
   ]
+
+  const addExpenceHandler = (expence) => {
+    console.log("In App JS");
+    console.log(expence);
+  }
+
   return (
     <div className="App">
       <div className="App-header">
-        <NewExpence />
+        <NewExpence onAddExpence={addExpenceHandler} />
         <Expence items={expences}/>
-        
       </div>
     </div>
   );
